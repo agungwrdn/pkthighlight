@@ -30,12 +30,12 @@ public class Konsumsi extends AppCompatActivity implements View.OnClickListener 
         pdfViewa = (PDFView) findViewById(R.id.pdfView);
         Button btn = (Button) findViewById(R.id.refresh);
         btn.setOnClickListener(this);
-        pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Produksi/Konsumsi_Gas/konsumsiamoniak.pdf")).load();
+        pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/PKT/Produksi/Konsumsi Gas.pdf")).load();
     }
 
     @Override
     public void onClick(View v) {
-        new DownloadFileFromURL().execute("https://firebasestorage.googleapis.com/v0/b/ptpupukkaltim-29298.appspot.com/o/amoniak%2Famoniak.pdf?alt=media&token=a659dbe8-03d7-4dbe-8b11-a46d8dfc8ea9");
+        new DownloadFileFromURL().execute("https://firebasestorage.googleapis.com/v0/b/pkt-highlight.appspot.com/o/produksi%2Fkonsumsi.pdf?alt=media&token=20454ac5-bbf0-4382-a7f5-0649768d0f95");
     }
 
     class DownloadFileFromURL extends AsyncTask<String, String, String> {
@@ -75,7 +75,7 @@ public class Konsumsi extends AppCompatActivity implements View.OnClickListener 
 
                 // Output stream to write file
 
-                OutputStream output = new FileOutputStream(root+"/Download/PKT/Produksi/Konsumsi Produksi Gas.pdf");
+                OutputStream output = new FileOutputStream(root+"/PKT/Produksi/Konsumsi Gas.pdf");
                 byte data[] = new byte[1024];
 
                 long total = 0;
@@ -101,7 +101,7 @@ public class Konsumsi extends AppCompatActivity implements View.OnClickListener 
         @Override
         protected void onPostExecute(String file_url) {
             System.out.println("Downloaded");
-            pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Produksi/Konsumsi Produksi Gas.pdf")).load();
+            pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/PKT/Produksi/Konsumsi Gas.pdf")).load();
             pDialoga.dismiss();
         }
     }

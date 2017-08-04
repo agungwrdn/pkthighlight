@@ -30,12 +30,12 @@ public class Komoditas extends AppCompatActivity implements View.OnClickListener
         pdfViewa = (PDFView) findViewById(R.id.pdfView);
         Button btn = (Button) findViewById(R.id.refresh);
         btn.setOnClickListener(this);
-        pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Lain/Komoditas/Harga Komoditas.pdf")).load();
+        pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Lain/Harga Komoditas.pdf")).load();
     }
 
     @Override
     public void onClick(View v) {
-        new DownloadFileFromURL().execute("https://firebasestorage.googleapis.com/v0/b/ptpupukkaltim-29298.appspot.com/o/amoniak%2Famoniak.pdf?alt=media&token=a659dbe8-03d7-4dbe-8b11-a46d8dfc8ea9");
+        new DownloadFileFromURL().execute("https://firebasestorage.googleapis.com/v0/b/pkt-highlight.appspot.com/o/lain%2Fkomoditas.pdf?alt=media&token=e5af4a8b-999e-487d-a089-ac8a3c675c9a");
     }
 
     class DownloadFileFromURL extends AsyncTask<String, String, String> {
@@ -75,7 +75,7 @@ public class Komoditas extends AppCompatActivity implements View.OnClickListener
 
                 // Output stream to write file
 
-                OutputStream output = new FileOutputStream(root+"/Download/PKT/Lain/Komoditas/Harga Komoditas.pdf");
+                OutputStream output = new FileOutputStream(root+"/Download/PKT/Lain/Harga Komoditas.pdf");
                 byte data[] = new byte[1024];
 
                 long total = 0;
@@ -101,7 +101,7 @@ public class Komoditas extends AppCompatActivity implements View.OnClickListener
         @Override
         protected void onPostExecute(String file_url) {
             System.out.println("Downloaded");
-            pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Lain/Komoditas/Harga Komoditas.pdf")).load();
+            pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Lain/Harga Komoditas.pdf")).load();
             pDialoga.dismiss();
         }
     }

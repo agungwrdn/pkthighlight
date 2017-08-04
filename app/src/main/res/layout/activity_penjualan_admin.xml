@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context="com.pupukkaltim.pkthighlight.MainActivity">
+    tools:context="com.pupukkaltim.pkthighlight.Admin.KeuanganAdmin">
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -30,7 +29,7 @@
             android:textSize="35dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PKT's HIGHLIGHT"
+            android:text="Penjualan"
             android:layout_gravity="center"/>
 
         <Button
@@ -47,7 +46,7 @@
             android:background="#1bc126"/>
 
         <Button
-            android:id="@+id/btnProduksia"
+            android:id="@+id/btnStok"
             android:layout_marginTop="5dp"
             android:layout_gravity="center"
             android:layout_width="match_parent"
@@ -56,12 +55,12 @@
             android:layout_marginRight="30dp"
             android:textAlignment="center"
             android:textStyle="bold"
-            android:textSize="35dp"
-            android:text="PRODUKSI"
-            android:background="#1278cc"/>
+            android:textSize="30dp"
+            android:text="Stok Penjualan"
+            android:background="#ec5c0e"/>
 
         <Button
-            android:id="@+id/btnPenjualana"
+            android:id="@+id/btnTonase"
             android:layout_marginTop="5dp"
             android:layout_gravity="center"
             android:layout_width="match_parent"
@@ -70,37 +69,8 @@
             android:layout_marginRight="30dp"
             android:textAlignment="center"
             android:textStyle="bold"
-            android:textSize="35dp"
-            android:text="PENJUALAN"
-            android:background="#1278cc"/>
-
-        <Button
-            android:id="@+id/btnKeuangana"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:textSize="35dp"
-            android:text="KEUANGAN"
-            android:background="#1278cc"/>
-
-        <Button
-            android:id="@+id/btnLaina"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:textSize="35dp"
-            android:text="LAIN - LAIN"
-            android:background="#1278cc"/>
+            android:textSize="30dp"
+            android:text="Tonase Penjualan"
+            android:background="#ec5c0e"/>
     </LinearLayout>
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

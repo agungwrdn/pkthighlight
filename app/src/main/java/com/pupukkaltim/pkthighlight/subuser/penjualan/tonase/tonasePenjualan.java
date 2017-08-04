@@ -30,12 +30,12 @@ public class tonasePenjualan extends AppCompatActivity implements View.OnClickLi
         pdfViewa = (PDFView) findViewById(R.id.pdfView);
         Button btn = (Button) findViewById(R.id.refresh);
         btn.setOnClickListener(this);
-        pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Penjualan/TonasePenjualan/Tonase Penjualan.pdf")).load();
+        pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Penjualan/Tonase Penjualan.pdf")).load();
     }
 
     @Override
     public void onClick(View v) {
-        new DownloadFileFromURL().execute("https://firebasestorage.googleapis.com/v0/b/ptpupukkaltim-29298.appspot.com/o/amoniak%2Famoniak.pdf?alt=media&token=a659dbe8-03d7-4dbe-8b11-a46d8dfc8ea9");
+        new DownloadFileFromURL().execute("https://firebasestorage.googleapis.com/v0/b/pkt-highlight.appspot.com/o/penjualan%2FTonase%20Penjualan.pdf?alt=media&token=78fed27a-8d9d-4228-864b-770c7331ba13");
     }
 
     class DownloadFileFromURL extends AsyncTask<String, String, String> {
@@ -75,7 +75,7 @@ public class tonasePenjualan extends AppCompatActivity implements View.OnClickLi
 
                 // Output stream to write file
 
-                OutputStream output = new FileOutputStream(root+"/Download/PKT/Penjualan/TonasePenjualan/Tonase Penjualan.pdf");
+                OutputStream output = new FileOutputStream(root+"/Download/PKT/Penjualan/Tonase Penjualan.pdf");
                 byte data[] = new byte[1024];
 
                 long total = 0;
@@ -101,7 +101,7 @@ public class tonasePenjualan extends AppCompatActivity implements View.OnClickLi
         @Override
         protected void onPostExecute(String file_url) {
             System.out.println("Downloaded");
-            pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Penjualan/TonasePenjualan/tonasepenjualanamoniak.pdf")).load();
+            pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Penjualan/Tonase Penjualan.pdf")).load();
             pDialoga.dismiss();
         }
     }

@@ -20,6 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Admin.ProduksiAdmin" />
+        <activity android:name=".Admin.KeuanganAdmin" />
+        <activity android:name=".Admin.PenjualanAdmin" />
+        <activity android:name=".Admin.LainAdmin" />
         <activity android:name=".User.KeuanganUser" />
         <activity android:name=".User.LainUser" />
         <activity android:name=".User.PenjualanUser" />
@@ -30,6 +34,7 @@
         <activity android:name=".subuser.produksi.tonase.Tonase" />
         <activity android:name=".subuser.produksi.konsumsi.Konsumsi" />
         <activity android:name=".subuser.produksi.downtime.Downtime" />
+        <activity android:name=".subuser.produksi.onstream.onstream"/>
         <activity android:name=".subuser.penjualan.stok.stok" />
         <activity android:name=".subuser.penjualan.tonase.tonasePenjualan" />
         <activity android:name=".subuser.keuangan.LR.LabaRugi" />
@@ -38,6 +43,17 @@
         <activity android:name=".subuser.keuangan.hpp.HPP" />
         <activity android:name=".subuser.lain.download.Download" />
         <activity android:name=".subuser.lain.komoditas.Komoditas" />
+        <activity android:name=".subadmin.keuangan.hpp.HPPAdmin" />
+        <activity android:name=".subadmin.keuangan.kas.PosisiKasAdmin" />
+        <activity android:name=".subadmin.keuangan.LR.LabaRugiAdmin" />
+        <activity android:name=".subadmin.keuangan.pinjaman.PinjamanAdmin" />
+        <activity android:name=".subadmin.penjualan.stok.stok"/>
+        <activity android:name=".subadmin.penjualan.tonase.tonase"/>
+        <activity android:name=".subadmin.lain.download.DownloadAdmin"/>
+        <activity android:name=".subadmin.lain.komoditas.KomoditasAdmin"/>
+        <activity android:name=".subadmin.produksi.downtime.downtimeAdmin"/>
+        <activity android:name=".subadmin.produksi.konsumsi.konsumsiProduksiAdmin"/>
+        <activity android:name=".subadmin.produksi.onstream.onStreamAdmin"/>
+        <activity android:name=".subadmin.produksi.tonase.TonaseProduksiAdmin"/>
     </application>
-
 </manifest>

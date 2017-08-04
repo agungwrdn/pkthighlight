@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#FFF"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_marginTop="6dp"
+            android:background="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnChoosek"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:text="choose"/>
+        <Button
+            android:layout_marginTop="6dp"
+            android:background="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/uploadk"
+            android:layout_weight="1"
+            android:text="upload"/>
+    </LinearLayout>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pdf"
+        android:layout_below="@+id/linear" />
+</RelativeLayout>

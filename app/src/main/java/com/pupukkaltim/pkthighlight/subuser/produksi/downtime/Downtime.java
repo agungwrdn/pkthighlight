@@ -36,7 +36,7 @@ public class Downtime extends AppCompatActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
-        new DownloadFileFromURL().execute("https://firebasestorage.googleapis.com/v0/b/ptpupukkaltim-29298.appspot.com/o/amoniak%2Famoniak.pdf?alt=media&token=a659dbe8-03d7-4dbe-8b11-a46d8dfc8ea9");
+        new DownloadFileFromURL().execute("https://firebasestorage.googleapis.com/v0/b/pkt-highlight.appspot.com/o/produksi%2Fdowntime.pdf?alt=media&token=92301bc0-698b-48eb-84ed-bd7021482da5");
     }
 
     class DownloadFileFromURL extends AsyncTask<String, String, String> {

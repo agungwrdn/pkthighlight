@@ -39,7 +39,7 @@ public class LoginAdmin extends AppCompatActivity implements View.OnClickListene
     }
 
     private void onLoginUser() {
-        if(getUserEmail().equals("admin@pkt.com") && getUserPassword().equals("adminpkt")){
+        if(!getUserEmail().equals("") && !getUserPassword().equals("")){
             logIn(getUserEmail(), getUserPassword());
         } else {
             showFieldsAreRequired();

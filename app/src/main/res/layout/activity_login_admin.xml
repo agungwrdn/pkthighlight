@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:background="#fff"
+        android:background="#FFF"
         android:elevation="4dp"
         android:orientation="vertical"
         android:padding="20dp"
@@ -40,11 +40,10 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="#000">
 
                 <EditText
-                    android:textColorHint="#4d4e4f"
-                    android:textColor="#4d4e4f"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:drawableTint="#FF4081"
@@ -56,7 +55,8 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="#000">
 
                 <EditText
                     android:id="@+id/password"
@@ -65,8 +65,7 @@
                     android:layout_marginTop="16dp"
                     android:drawableTint="#FF4081"
                     android:hint="Password"
-                    android:inputType="textPassword"
-                    android:textColor="#4d4e4f" />
+                    android:inputType="textPassword" />
             </android.support.design.widget.TextInputLayout>
 
             <TextView

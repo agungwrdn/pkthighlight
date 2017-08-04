@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
@@ -20,8 +21,10 @@ import com.pupukkaltim.pkthighlight.User.LainUser;
 import com.pupukkaltim.pkthighlight.User.PenjualanUser;
 import com.pupukkaltim.pkthighlight.User.ProduksiUser;
 
+import java.io.File;
+
 public class UserActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btnProduksi,btnPenjualan,btnKeuangan,btnLain;
+    private Button btnProduksi,btnPenjualan,btnKeuangan,btnLain;
     private static final int EXTERNAL_STORAGE_PERMISSION_CONSTANT = 100;
     private static final int REQUEST_PERMISSION_SETTING = 101;
     public boolean sentToSettings = false;
@@ -96,11 +99,20 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
             editor.putBoolean(Manifest.permission.WRITE_EXTERNAL_STORAGE,true);
             editor.commit();
 
-
         } else {
             //You already have the permission, just go ahead.
             proceedAfterPermission();
         }
+        File dir1 = new File(Environment.getExternalStorageDirectory().toString()+"/PKT");
+        dir1.mkdir();
+        File dir2 = new File(Environment.getExternalStorageDirectory().toString()+"/PKT/Lain");
+        dir2.mkdir();
+        File dir3 = new File(Environment.getExternalStorageDirectory().toString()+"/PKT/Keuangan");
+        dir3.mkdir();
+        File dir4 = new File(Environment.getExternalStorageDirectory().toString()+"/PKT/Penjualan");
+        dir4.mkdir();
+        File dir5 = new File(Environment.getExternalStorageDirectory().toString()+"/PKT/Produksi");
+        dir5.mkdir();
     }
 
 

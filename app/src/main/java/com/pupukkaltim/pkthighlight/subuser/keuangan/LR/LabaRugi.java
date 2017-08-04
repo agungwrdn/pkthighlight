@@ -35,7 +35,7 @@ public class LabaRugi extends AppCompatActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
-        new DownloadFileFromURL().execute("https://firebasestorage.googleapis.com/v0/b/ptpupukkaltim-29298.appspot.com/o/amoniak%2Famoniak.pdf?alt=media&token=a659dbe8-03d7-4dbe-8b11-a46d8dfc8ea9");
+        new DownloadFileFromURL().execute("https://firebasestorage.googleapis.com/v0/b/pkt-highlight.appspot.com/o/keuangan%2FLR.pdf?alt=media&token=4761c34f-dc9e-406a-908f-f6ded5101a55");
     }
 
     class DownloadFileFromURL extends AsyncTask<String, String, String> {
