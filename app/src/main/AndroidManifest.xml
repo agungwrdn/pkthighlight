@@ -2,20 +2,42 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pupukkaltim.pkthighlight">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ChooseActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".User.KeuanganUser" />
+        <activity android:name=".User.LainUser" />
+        <activity android:name=".User.PenjualanUser" />
+        <activity android:name=".User.ProduksiUser" />
+        <activity android:name=".UserActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginAdmin" />
+        <activity android:name=".subuser.produksi.tonase.Tonase" />
+        <activity android:name=".subuser.produksi.konsumsi.Konsumsi" />
+        <activity android:name=".subuser.produksi.downtime.Downtime" />
+        <activity android:name=".subuser.penjualan.stok.stok" />
+        <activity android:name=".subuser.penjualan.tonase.tonasePenjualan" />
+        <activity android:name=".subuser.keuangan.LR.LabaRugi" />
+        <activity android:name=".subuser.keuangan.kas.PosisiKas" />
+        <activity android:name=".subuser.keuangan.pinjaman.Pinjaman" />
+        <activity android:name=".subuser.keuangan.hpp.HPP" />
+        <activity android:name=".subuser.lain.download.Download" />
+        <activity android:name=".subuser.lain.komoditas.Komoditas" />
     </application>
 
 </manifest>
