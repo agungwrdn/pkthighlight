@@ -103,15 +103,15 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
             //You already have the permission, just go ahead.
             proceedAfterPermission();
         }
-        File dir1 = new File(Environment.getExternalStorageDirectory().toString()+"/PKT");
+        File dir1 = new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT");
         dir1.mkdir();
-        File dir2 = new File(Environment.getExternalStorageDirectory().toString()+"/PKT/Lain");
+        File dir2 = new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Lain");
         dir2.mkdir();
-        File dir3 = new File(Environment.getExternalStorageDirectory().toString()+"/PKT/Keuangan");
+        File dir3 = new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Keuangan");
         dir3.mkdir();
-        File dir4 = new File(Environment.getExternalStorageDirectory().toString()+"/PKT/Penjualan");
+        File dir4 = new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Penjualan");
         dir4.mkdir();
-        File dir5 = new File(Environment.getExternalStorageDirectory().toString()+"/PKT/Produksi");
+        File dir5 = new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Produksi");
         dir5.mkdir();
     }
 
