@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.pupukkaltim.pkthighlight.User.KeuanganUser;
 import com.pupukkaltim.pkthighlight.User.LainUser;
 import com.pupukkaltim.pkthighlight.User.PenjualanUser;
@@ -24,21 +25,24 @@ import com.pupukkaltim.pkthighlight.User.ProduksiUser;
 import java.io.File;
 
 public class UserActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btnProduksi,btnPenjualan,btnKeuangan,btnLain;
+    private Button btnProduksi,btnPenjualan,btnKeuangan,btnLain, btnLogout;
     private static final int EXTERNAL_STORAGE_PERMISSION_CONSTANT = 100;
     private static final int REQUEST_PERMISSION_SETTING = 101;
     public boolean sentToSettings = false;
     public SharedPreferences permissionStatus;
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
-
+        mAuth = FirebaseAuth.getInstance();
         btnProduksi = (Button) findViewById(R.id.btnProduksi);
         btnPenjualan = (Button) findViewById(R.id.btnPenjualan);
         btnKeuangan = (Button) findViewById(R.id.btnKeuangan);
         btnLain = (Button) findViewById(R.id.btnLain);
+        btnLogout = (Button) findViewById(R.id.btnLogout);
 
+        btnLogout.setOnClickListener(this);
         btnProduksi.setOnClickListener(this);
         btnPenjualan.setOnClickListener(this);
         btnKeuangan.setOnClickListener(this);
@@ -190,9 +194,17 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v == btnKeuangan){
             final Intent dia = new Intent(this, KeuanganUser.class);
             startActivity(dia);
-        } else {
+        } else if(v == btnLain) {
             final Intent dia = new Intent(this, LainUser.class);
             startActivity(dia);
+        } else {
+            logout();
         }
+    }
+
+    private void logout() {
+        mAuth.signOut();
+        Intent dia = new Intent(this, ChooseActivity.class);
+        startActivity(dia);
     }
 }

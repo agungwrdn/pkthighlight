@@ -13,7 +13,7 @@ import com.pupukkaltim.pkthighlight.Admin.ProduksiAdmin;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btnKeuangan, btnLain, btnPenjualan, btnProduksi;
+    private Button btnKeuangan, btnLain, btnPenjualan, btnProduksi, btnRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnLain = (Button) findViewById(R.id.btnLaina);
         btnPenjualan = (Button) findViewById(R.id.btnPenjualana);
         btnProduksi = (Button) findViewById(R.id.btnProduksia);
+        btnRegister = (Button) findViewById(R.id.btnRegister);
 
+        btnRegister.setOnClickListener(this);
         btnProduksi.setOnClickListener(this);
         btnLain.setOnClickListener(this);
         btnPenjualan.setOnClickListener(this);
@@ -43,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(dia);
         } else if (v == btnProduksi){
             Intent dia = new Intent(this, ProduksiAdmin.class);
+            startActivity(dia);
+        } else if (v == btnRegister){
+            Intent dia = new Intent(this, TambahUser.class);
             startActivity(dia);
         }
     }

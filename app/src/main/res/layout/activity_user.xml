@@ -100,5 +100,19 @@
             android:textSize="35dp"
             android:text="LAIN - LAIN"
             android:background="#1278cc"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="35dp"
+            android:text="Logout"
+            android:background="#d40a0a"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
