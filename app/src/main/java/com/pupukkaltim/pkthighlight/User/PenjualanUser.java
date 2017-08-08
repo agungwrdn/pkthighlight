@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.pupukkaltim.pkthighlight.R;
 import com.pupukkaltim.pkthighlight.subuser.penjualan.stok.stok;
+import com.pupukkaltim.pkthighlight.subuser.penjualan.tonase.tonasePenjualan;
 import com.pupukkaltim.pkthighlight.subuser.produksi.tonase.Tonase;
 
 
@@ -30,7 +31,7 @@ public class PenjualanUser extends AppCompatActivity implements View.OnClickList
             Intent dia = new Intent(this, stok.class);
             startActivity(dia);
         } else if(v == btnTonase){
-            Intent dia = new Intent(this, Tonase.class);
+            Intent dia = new Intent(this, tonasePenjualan.class);
             startActivity(dia);
         }
     }
