@@ -23,14 +23,15 @@ import java.net.URLConnection;
 public class Konsumsi extends AppCompatActivity implements View.OnClickListener {
     private PDFView pdfViewa;
     private ProgressDialog pDialoga;
+    private Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.showuser);
         pdfViewa = (PDFView) findViewById(R.id.pdfView);
-        Button btn = (Button) findViewById(R.id.refresh);
+        btn = (Button) findViewById(R.id.refresh);
         btn.setOnClickListener(this);
-        pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/PKT/Produksi/Konsumsi Gas.pdf")).load();
+        pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Produksi/Konsumsi Gas.pdf")).load();
     }
 
     @Override
@@ -75,7 +76,7 @@ public class Konsumsi extends AppCompatActivity implements View.OnClickListener 
 
                 // Output stream to write file
 
-                OutputStream output = new FileOutputStream(root+"/PKT/Produksi/Konsumsi Gas.pdf");
+                OutputStream output = new FileOutputStream(root+"/Download/PKT/Produksi/Konsumsi Gas.pdf");
                 byte data[] = new byte[1024];
 
                 long total = 0;
@@ -101,7 +102,7 @@ public class Konsumsi extends AppCompatActivity implements View.OnClickListener 
         @Override
         protected void onPostExecute(String file_url) {
             System.out.println("Downloaded");
-            pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/PKT/Produksi/Konsumsi Gas.pdf")).load();
+            pdfViewa.fromFile(new File(Environment.getExternalStorageDirectory().toString()+"/Download/PKT/Produksi/Konsumsi Gas.pdf")).load();
             pDialoga.dismiss();
         }
     }
