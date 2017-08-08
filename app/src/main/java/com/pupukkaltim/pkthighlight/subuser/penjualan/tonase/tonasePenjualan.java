@@ -35,7 +35,7 @@ public class tonasePenjualan extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        new DownloadFileFromURL().execute("https://firebasestorage.googleapis.com/v0/b/pkt-highlight.appspot.com/o/penjualan%2FTonase%20Penjualan.pdf?alt=media&token=78fed27a-8d9d-4228-864b-770c7331ba13");
+        new DownloadFileFromURL().execute("https://firebasestorage.googleapis.com/v0/b/pkt-highlight.appspot.com/o/penjualan%2FTonase%20Penjualan.pdf?alt=media&token=b3d2d54a-68c0-40f7-9db2-44d2edd0f2dd");
     }
 
     class DownloadFileFromURL extends AsyncTask<String, String, String> {
