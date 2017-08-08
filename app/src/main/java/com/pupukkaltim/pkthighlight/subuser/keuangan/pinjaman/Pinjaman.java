@@ -36,7 +36,7 @@ public class Pinjaman extends AppCompatActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
-        new DownloadFileFromURL().execute("https://firebasestorage.googleapis.com/v0/b/pkt-highlight.appspot.com/o/keuangan%2FLR.pdf?alt=media&token=4761c34f-dc9e-406a-908f-f6ded5101a55");
+        new DownloadFileFromURL().execute("https://firebasestorage.googleapis.com/v0/b/pkt-highlight.appspot.com/o/keuangan%2FPinjaman%20Jangka%20Pendek.pdf?alt=media&token=af11b42b-c19e-4e10-be55-6102f674e4ea");
     }
 
     class DownloadFileFromURL extends AsyncTask<String, String, String> {
